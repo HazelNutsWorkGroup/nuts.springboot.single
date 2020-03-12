@@ -1,0 +1,16 @@
+rootProject.name = 'nuts.springboot.single'
+include 'nuts-springboot-boot'
+findProject(':nuts-springboot-boot')?.name = 'nuts.springboot.boot'
+
+include 'nuts-springboot-logback'
+findProject(':nuts-springboot-logback')?.name = 'nuts.springboot.logback'
+
+def getProfileType() {
+
+}
+
+rootProject.children.each {
+    project ->
+        def fileName = project.name.substring(project.name.lastIndexOf('.') + 1)+".gradle"
+        project.setBuildFileName(fileName)
+}
