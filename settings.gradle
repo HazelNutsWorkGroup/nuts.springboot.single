@@ -9,6 +9,21 @@ findProject(':components:nuts-springboot-logback')?.name = 'nuts.springboot.logb
 include 'components:nuts-springboot-log4j2'
 findProject(':components:nuts-springboot-log4j2')?.name = 'nuts.springboot.log4j2'
 
+include 'endpoints:nuts.springboot.clover'
+findProject(':endpoints:nuts-springboot-clover')?.name = 'nuts.springboot.clover'
+
+include 'endpoints:nuts-springboot-home'
+findProject(':endpoints:nuts-springboot-home')?.name = 'nuts.springboot.home'
+
+include 'endpoints:nuts-springboot-auth'
+findProject(':endpoints:nuts-springboot-auth')?.name = 'nuts.springboot.auth'
+
+include 'kernels:nuts-springboot-core'
+findProject(':kernels:nuts-springboot-core')?.name = 'nuts.springboot.core'
+
+/*
+** Modify the associated name of the setting.gradle file
+*/
 def modifyProjectBuildFileName(ProjectDescriptor project) {
     def fileName = project.name.substring(project.name.lastIndexOf('.') + 1) + ".gradle"
 
@@ -20,7 +35,10 @@ def modifyProjectBuildFileName(ProjectDescriptor project) {
             modifyProjectBuildFileName(child)
     }
 }
-
+/*
+** This code must be executed last,
+**  otherwise the newly included file cannot modify the name mapping
+*/
 rootProject.children.each {
     project ->
         modifyProjectBuildFileName(project)

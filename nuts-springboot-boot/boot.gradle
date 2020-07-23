@@ -1,13 +1,9 @@
 
 dependencies {
-    compile project(':components:nuts.springboot.logback')
+    implementation project(':endpoints:nuts.springboot.clover')
+    implementation project(':components:nuts.springboot.logback')
 }
 
 task logInitialize {
     logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
-
-    project.getRepositories().each {
-        repo ->
-            logger.info String.format("\t%s", repo.name)
-    }
 }
