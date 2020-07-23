@@ -1,9 +1,17 @@
-
 dependencies {
-    compile project(':components:nuts.springboot.logback')
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
 }
 
-task logInitialize {
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+
+task logbackInitialize {
     logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
 
     project.getRepositories().each {

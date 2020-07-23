@@ -1,0 +1,9 @@
+logging:
+  config: classpath:logback-spring.xml
+
+
+developer:
+  name: jkllj
+  website: jlkj
+  qq: uoiuoi---
+  phone-number: oiuoiuu

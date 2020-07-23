@@ -1,22 +1,13 @@
 rootProject.name = 'nuts.springboot.single'
+
 include 'nuts-springboot-boot'
 findProject(':nuts-springboot-boot')?.name = 'nuts.springboot.boot'
 
-include 'nuts-springboot-components'
-findProject(':nuts-springboot-components')?.name = 'nuts.springboot.components'
+include 'components:nuts-springboot-logback'
+findProject(':components:nuts-springboot-logback')?.name = 'nuts.springboot.logback'
 
-include 'nuts-springboot-businesses'
-findProject(':nuts-springboot-businesses')?.name = 'nuts.springboot.businesses'
-
-include 'nuts-springboot-endpoints'
-findProject(':nuts-springboot-endpoints')?.name = 'nuts.springboot.endpoints'
-
-include 'nuts-springboot-tests'
-findProject(':nuts-springboot-tests')?.name = 'nuts.springboot.tests'
-
-include 'nuts-springboot-components:nuts-components-logback'
-findProject(':nuts-springboot-components:nuts-components-logback')?.name = 'nuts.components.logback'
-
+include 'components:nuts-springboot-log4j2'
+findProject(':components:nuts-springboot-log4j2')?.name = 'nuts.springboot.log4j2'
 
 def modifyProjectBuildFileName(ProjectDescriptor project) {
     def fileName = project.name.substring(project.name.lastIndexOf('.') + 1) + ".gradle"
@@ -34,6 +25,4 @@ rootProject.children.each {
     project ->
         modifyProjectBuildFileName(project)
 }
-include 'nuts-springboot-components:nuts-springboot-logback'
-findProject(':nuts-springboot-components:nuts-springboot-logback')?.name = 'nuts.springboot.logback'
 
