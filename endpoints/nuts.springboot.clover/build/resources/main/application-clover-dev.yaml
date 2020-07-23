@@ -1,0 +1,6 @@
+clover:
+  props:
+    name: testObject
+    age: 35
+  score:
+    math: 88
