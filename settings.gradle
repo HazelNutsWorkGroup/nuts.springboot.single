@@ -14,8 +14,8 @@ findProject(':nuts-springboot-endpoints')?.name = 'nuts.springboot.endpoints'
 include 'nuts-springboot-tests'
 findProject(':nuts-springboot-tests')?.name = 'nuts.springboot.tests'
 
-include 'nuts-springboot-components:nuts.components.logback'
-findProject(':nuts-springboot-components:nuts.components.logback')?.name = 'nuts.components.logback'
+include 'nuts-springboot-components:nuts-components-logback'
+findProject(':nuts-springboot-components:nuts-components-logback')?.name = 'nuts.components.logback'
 
 
 def modifyProjectBuildFileName(ProjectDescriptor project) {
@@ -34,4 +34,6 @@ rootProject.children.each {
     project ->
         modifyProjectBuildFileName(project)
 }
+include 'nuts-springboot-components:nuts-springboot-logback'
+findProject(':nuts-springboot-components:nuts-springboot-logback')?.name = 'nuts.springboot.logback'
 

@@ -1,9 +1,0 @@
-task logbackInitialize {
-    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
-
-    project.getRepositories().each {
-        repo ->
-            logger.info String.format("\t%s", repo.name)
-    }
-}
-
