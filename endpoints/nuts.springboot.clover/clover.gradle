@@ -1,0 +1,16 @@
+dependencies {
+    implementation project(':endpoints:nuts.springboot.home')
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+
+task cloverInitialize {
+    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+}

@@ -29,7 +29,14 @@ public class HelloWorldController {
     private Student student;
 
     @RequestMapping("/info")
-    public String getInfo(){
+    public String getInfo() {
         return student.toString();
     }
+
+    @RequestMapping("/err")
+    public String getError() {
+
+        throw new NullPointerException("This is Test.");
+    }
+
 }

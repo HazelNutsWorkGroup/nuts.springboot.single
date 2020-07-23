@@ -115,3 +115,4 @@ fabric.properties
 /nuts-springboot-boot/build/
 /.idea/jarRepositories.xml
 /.idea/misc.xml
+/.idea/inspectionProfiles/
