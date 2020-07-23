@@ -1,7 +1,7 @@
 <h1 align="center"><a href="README.md">Nuts - SpringBoot Component Kits</a></h1>  
 
-**<p align="right">「Gradle」构建工具</p>**
-*引言*   
+**<p align="right">「nuts-springboot-boot」工程引导项目</p>**
+「nuts-springboot-boot」是整个工程的引导项目，关联引入相关的模块,并作为启动项目的入口。
 # <a id="nav">目录</a>
 
 1. **[介绍](#info)**  

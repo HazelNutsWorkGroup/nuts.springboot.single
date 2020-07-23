@@ -6,8 +6,9 @@ plugins {
 
 allprojects {
     apply plugin: 'java'
+    apply plugin: 'idea'
 
-    group 'org.hazulnut'
+    group 'org.hazelnut'
     version '1.0-SNAPSHOT'
     setProperty('sourceCompatibility', 1.8)
     setProperty('targetCompatibility', 1.8)
@@ -37,15 +38,3 @@ subprojects {
         }
     }
 }
-
-task testP {
-    doFirst {
-        println 'test dsdfsdf'
-    }
-    doLast {
-        println 'test doLast'
-    }
-}
-
-this.compileJava.dependsOn(testP)
-

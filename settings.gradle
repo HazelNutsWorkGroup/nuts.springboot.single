@@ -2,15 +2,36 @@ rootProject.name = 'nuts.springboot.single'
 include 'nuts-springboot-boot'
 findProject(':nuts-springboot-boot')?.name = 'nuts.springboot.boot'
 
-include 'nuts-springboot-logback'
-findProject(':nuts-springboot-logback')?.name = 'nuts.springboot.logback'
+include 'nuts-springboot-components'
+findProject(':nuts-springboot-components')?.name = 'nuts.springboot.components'
 
-def getProfileType() {
+include 'nuts-springboot-businesses'
+findProject(':nuts-springboot-businesses')?.name = 'nuts.springboot.businesses'
 
+include 'nuts-springboot-endpoints'
+findProject(':nuts-springboot-endpoints')?.name = 'nuts.springboot.endpoints'
+
+include 'nuts-springboot-tests'
+findProject(':nuts-springboot-tests')?.name = 'nuts.springboot.tests'
+
+include 'nuts-springboot-components:nuts.components.logback'
+findProject(':nuts-springboot-components:nuts.components.logback')?.name = 'nuts.components.logback'
+
+
+def modifyProjectBuildFileName(ProjectDescriptor project) {
+    def fileName = project.name.substring(project.name.lastIndexOf('.') + 1) + ".gradle"
+
+    logger.info String.format("%s Change the name of the build.gradle file of the %s module to %s.", new Date().getTimeString(), project.name, fileName)
+    project.setBuildFileName(fileName)
+
+    project.children.each {
+        child ->
+            modifyProjectBuildFileName(child)
+    }
 }
 
 rootProject.children.each {
     project ->
-        def fileName = project.name.substring(project.name.lastIndexOf('.') + 1)+".gradle"
-        project.setBuildFileName(fileName)
+        modifyProjectBuildFileName(project)
 }
+
