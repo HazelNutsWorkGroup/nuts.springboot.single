@@ -121,3 +121,4 @@ fabric.properties
 /endpoints/nuts-springboot-home/build/
 /components/nuts-springboot-log4j2/build/
 /endpoints/nuts-springboot-home/build/
+/monitors/nuts-springboot-listener/build/
