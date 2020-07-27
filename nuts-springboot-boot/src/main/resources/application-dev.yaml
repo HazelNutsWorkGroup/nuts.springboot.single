@@ -1,12 +1,32 @@
 boot:
   props:
     name: dev
+    addr: 0.0.0.0
 
 spring:
   profiles:
     include: clover-dev
+  boot:
+    admin:
+      client:
+        url: http://localhost:8099/mirror
+        instance:
+          service-base-url: http://localhost:8090/monitor
+  application:
+    name: Nuts-Hazulnut
 server:
   port: 8080
-  address: 0.0.0.0
   servlet:
     context-path: /v1.0
+management:
+  server:
+    port: 8090
+    servlet:
+      context-path: /monitor
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

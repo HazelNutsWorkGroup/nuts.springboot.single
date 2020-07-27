@@ -1,0 +1,11 @@
+dependencies {
+    implementation project(':components:nuts.springboot.logback')
+//    implementation project(':components:nuts.springboot.log4j2')
+
+    implementation 'de.codecentric:spring-boot-admin-starter-server:2.2.4'
+}
+
+
+task listenerInitialize {
+    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+}

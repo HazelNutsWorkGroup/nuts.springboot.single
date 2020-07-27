@@ -1,0 +1,17 @@
+listener:
+  props:
+    name: listener-dev
+    addr: 0.0.0.0
+
+spring:
+  profiles:
+    include: logback-dev
+  #    inclued: log4j2-dev
+  application:
+    name: Nuts-Monitor
+
+server:
+  port: 8099
+  servlet:
+    context-path: /mirror
+

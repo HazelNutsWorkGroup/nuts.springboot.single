@@ -4,6 +4,10 @@ plugins {
     id 'java'
 }
 
+bootJar {
+    enabled = false
+}
+
 allprojects {
     apply plugin: 'java'
     apply plugin: 'idea'

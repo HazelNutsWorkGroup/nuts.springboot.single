@@ -3,6 +3,10 @@ rootProject.name = 'nuts.springboot.single'
 include 'nuts-springboot-boot'
 findProject(':nuts-springboot-boot')?.name = 'nuts.springboot.boot'
 
+include 'nuts-springboot-listener'
+findProject(':nuts-springboot-listener')?.name = 'nuts.springboot.listener'
+
+
 include 'components:nuts-springboot-logback'
 findProject(':components:nuts-springboot-logback')?.name = 'nuts.springboot.logback'
 
@@ -20,6 +24,7 @@ findProject(':endpoints:nuts-springboot-auth')?.name = 'nuts.springboot.auth'
 
 include 'kernels:nuts-springboot-core'
 findProject(':kernels:nuts-springboot-core')?.name = 'nuts.springboot.core'
+
 
 /*
 ** Modify the associated name of the setting.gradle file
