@@ -33,8 +33,15 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
 
     dependencies {
-        implementation 'org.springframework.boot:spring-boot-starter-actuator'
-        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation('org.springframework.boot:spring-boot-starter-actuator') {
+            exclude group: 'ch.qos.logback', module: 'logback-classic'
+            exclude group: 'org.apache.logging.log4j', module: 'log4j-to-slf4j'
+        }
+        implementation('org.springframework.boot:spring-boot-starter-web') {
+            exclude group: 'ch.qos.logback', module: 'logback-classic'
+            exclude group: 'org.apache.logging.log4j', module: 'log4j-to-slf4j'
+        }
+
         testImplementation('org.springframework.boot:spring-boot-starter-test') {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
         }

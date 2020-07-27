@@ -1,0 +1,8 @@
+home:
+  props:
+    name: home-dev
+
+spring:
+  profiles:
+    include: logback-dev
+#    include: log4j2-dev

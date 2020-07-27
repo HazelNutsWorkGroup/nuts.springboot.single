@@ -1,7 +1,6 @@
 
 dependencies {
     implementation project(':endpoints:nuts.springboot.clover')
-    implementation project(':components:nuts.springboot.logback')
 }
 
 task logInitialize {

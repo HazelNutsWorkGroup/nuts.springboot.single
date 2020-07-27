@@ -1,5 +1,6 @@
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation 'ch.qos.logback:logback-classic'
+    implementation 'org.apache.logging.log4j:log4j-to-slf4j'
 }
 
 bootJar {
@@ -13,9 +14,4 @@ jar {
 
 task logbackInitialize {
     logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
-
-    project.getRepositories().each {
-        repo ->
-            logger.info String.format("\t%s", repo.name)
-    }
 }

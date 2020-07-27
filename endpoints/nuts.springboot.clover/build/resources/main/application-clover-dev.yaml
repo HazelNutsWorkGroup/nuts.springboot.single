@@ -1,6 +1,10 @@
 clover:
   props:
-    name: testObject
-    age: 35
+    name: clover-dev
+    age: 2
   score:
-    math: 88
+    math: 78
+
+spring:
+  profiles:
+    include: home-dev

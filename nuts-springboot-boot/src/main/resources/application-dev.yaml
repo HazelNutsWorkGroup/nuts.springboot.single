@@ -1,3 +1,7 @@
+boot:
+  props:
+    name: dev
+
 spring:
   profiles:
     include: clover-dev

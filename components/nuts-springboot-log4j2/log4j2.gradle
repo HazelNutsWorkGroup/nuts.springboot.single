@@ -1,6 +1,5 @@
 dependencies {
-    implementation project(':components:nuts.springboot.logback')
-//    implementation project(':components:nuts.springboot.log4j2')
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 }
 
 bootJar {
@@ -12,6 +11,6 @@ jar {
 }
 
 
-task homeInitialize {
+task log4j2Initialize {
     logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
 }

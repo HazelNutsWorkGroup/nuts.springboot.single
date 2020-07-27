@@ -1,0 +1,6 @@
+log4j2:
+  props:
+    name: log4j2-dev
+
+logging:
+  config: classpath:log4j2-spring.xml
