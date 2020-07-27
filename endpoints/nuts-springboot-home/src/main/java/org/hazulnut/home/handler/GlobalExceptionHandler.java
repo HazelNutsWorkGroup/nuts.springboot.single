@@ -1,11 +1,10 @@
 package org.hazulnut.home.handler;
 
-import org.hazulnut.home.model.ApiResponse;
+import org.hazulnut.home.model.RResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 全局异常处理.
@@ -18,19 +17,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * <p><b>Note:</b>
  * <p>2020/7/23 22:56: created.<br>
  */
-@ControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandler {
-    private final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     /**
-     * Json error handler api response.
+     * Handle other types of exceptions in RResponse.
      *
      * @param exception the exception
-     * @return the api response
+     * @return the RResponse
      */
-    @ExceptionHandler(value = Exception.class)
-    public ApiResponse jsonErrorHandler(Exception exception) {
+    @ExceptionHandler(Exception.class)
+    public RResponse jsonErrorHandler(Exception exception) {
         logger.error("[Exception]:{}", exception.getMessage());
-        return ApiResponse.ofException(exception);
+        return RResponse.ofException(exception);
     }
 }

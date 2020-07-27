@@ -1,9 +1,12 @@
 package org.hazulnut.controller;
 
+import org.hazulnut.home.model.RResponse;
 import org.hazulnut.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Random;
 
 /**
  * Controller usage example.
@@ -29,14 +32,16 @@ public class HelloWorldController {
     private Student student;
 
     @RequestMapping("/info")
-    public String getInfo() {
-        return student.toString();
+    public Student getInfo() {
+        return student;
     }
 
     @RequestMapping("/err")
-    public String getError() {
+    public RResponse getError() {
+        if (new Random().nextInt() % 2 == 0)
+            throw new NullPointerException("This is Test.");
 
-        throw new NullPointerException("This is Test.");
+        return RResponse.ofSuccess(student);
     }
 
 }
