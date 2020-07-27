@@ -116,6 +116,8 @@ fabric.properties
 /.idea/jarRepositories.xml
 /.idea/misc.xml
 /.idea/inspectionProfiles/
-/components/nuts-springboot-logback/build/tmp/jar/MANIFEST.MF
-/endpoints/nuts.springboot.clover/build/tmp/jar/MANIFEST.MF
-/endpoints/nuts-springboot-home/build/tmp/jar/MANIFEST.MF
+/components/nuts-springboot-logback/build/
+/endpoints/nuts.springboot.clover/build/
+/endpoints/nuts-springboot-home/build/
+/components/nuts-springboot-log4j2/build/
+/endpoints/nuts-springboot-home/build/
