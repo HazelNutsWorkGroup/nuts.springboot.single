@@ -1,0 +1,16 @@
+dependencies {
+
+}
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+
+task coreInitialize {
+    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+}

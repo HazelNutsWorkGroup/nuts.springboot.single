@@ -1,7 +1,7 @@
 <h1 align="center"><a href="README.md">Nuts - SpringBoot Component Kits</a></h1>  
 
-**<p align="right">「Gradle」构建工具</p>**
-「nuts-springboot-」 *引言*   
+**<p align="right">「nuts-springboot-home」通用功能整合项目</p>**
+「nuts-springboot-home」用于整合通用功能模块、组件模块，使用home模块可以快速建了项目的基础模板。   
 # <a id="nav">目录</a>
 
 1. **[介绍](#info)**  
@@ -35,10 +35,12 @@
 ## <a id="step">2.1. 配置步骤</a>  
 
 + **步骤一**  
-    相关操作的简要说明
+    可选日志组件：logback/log4j2
 ```html
     <html>
-        <!-- config/code 示例 -->
+            // 可选日志组件：logback/log4j2
+            implementation project(':components:nuts.springboot.logback')
+        //    implementation project(':components:nuts.springboot.log4j2')
     </html>
 ```  
 > **提示：** 需要注意的地方  

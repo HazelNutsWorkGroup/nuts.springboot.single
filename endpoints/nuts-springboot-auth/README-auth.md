@@ -1,7 +1,7 @@
 <h1 align="center"><a href="README.md">Nuts - SpringBoot Component Kits</a></h1>  
 
-**<p align="right">「Gradle」构建工具</p>**
-「nuts-springboot-」 *引言*   
+**<p align="right">「nuts-springboot-auth」授权管理</p>**
+「nuts-springboot-auth」登录验证，授权等相关组件模块。   
 # <a id="nav">目录</a>
 
 1. **[介绍](#info)**  

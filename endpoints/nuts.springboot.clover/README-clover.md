@@ -1,7 +1,7 @@
 <h1 align="center"><a href="README.md">Nuts - SpringBoot Component Kits</a></h1>  
 
-**<p align="right">「Gradle」构建工具</p>**
-「nuts-springboot-」 *引言*   
+**<p align="right">「nuts-springboot-clover」业务整合项目</p>**
+「nuts-springboot-clover」用于整合业务模块，组件模块等，形成一个整体型项目。 
 # <a id="nav">目录</a>
 
 1. **[介绍](#info)**  
@@ -35,10 +35,10 @@
 ## <a id="step">2.1. 配置步骤</a>  
 
 + **步骤一**  
-    相关操作的简要说明
+    引入nuts.springboot.home模块依赖
 ```html
     <html>
-        <!-- config/code 示例 -->
+        implementation project(':endpoints:nuts.springboot.home')
     </html>
 ```  
 > **提示：** 需要注意的地方  

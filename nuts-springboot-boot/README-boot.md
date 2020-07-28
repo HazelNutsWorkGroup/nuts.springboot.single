@@ -35,19 +35,20 @@
 ## <a id="step">2.1. 配置步骤</a>  
 
 + **步骤一**  
-    相关操作的简要说明
+    启用SpringBoot Admin Client功能
 ```html
     <html>
-        <!-- config/code 示例 -->
+            // 启用SpringBoot Admin Client功能
+            implementation 'de.codecentric:spring-boot-admin-starter-client:2.2.4'
     </html>
 ```  
 > **提示：** 需要注意的地方  
 
 + **步骤二** 
-    相关操作的简要说明
+    引入业务相关模块
 ```html
     <html>
-        <!-- config/code 示例 -->
+        implementation project(':endpoints:nuts.springboot.clover')
     </html>
 ```  
 > **提示：** 需要注意的地方  

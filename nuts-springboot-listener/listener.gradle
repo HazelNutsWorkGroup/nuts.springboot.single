@@ -1,7 +1,9 @@
 dependencies {
+    // 启动logback日志组件
     implementation project(':components:nuts.springboot.logback')
+    // 启动log4j2日志组件
 //    implementation project(':components:nuts.springboot.log4j2')
-
+    // 启动SpringBoot Admin服务端项目
     implementation 'de.codecentric:spring-boot-admin-starter-server:2.2.4'
 }
 

@@ -1,7 +1,7 @@
 <h1 align="center"><a href="README.md">Nuts - SpringBoot Component Kits</a></h1>  
 
-**<p align="right">「Gradle」构建工具</p>**
-「nuts-springboot-」 *引言*   
+**<p align="right">「nuts-springboot-listener」Admin服务端</p>**
+「nuts-springboot-listener」是Springboot Admin服务端项目，单独启动运行，用于收集client项目运行信息。  
 # <a id="nav">目录</a>
 
 1. **[介绍](#info)**  
@@ -35,19 +35,32 @@
 ## <a id="step">2.1. 配置步骤</a>  
 
 + **步骤一**  
-    相关操作的简要说明
+    启动SpringBoot Admin服务端项目
 ```html
     <html>
-        <!-- config/code 示例 -->
+        dependencies {
+            // 启动logback日志组件
+            implementation project(':components:nuts.springboot.logback')
+            // 启动log4j2日志组件
+        //    implementation project(':components:nuts.springboot.log4j2')
+            // 启动SpringBoot Admin服务端项目
+            implementation 'de.codecentric:spring-boot-admin-starter-server:2.2.4'
+        }
     </html>
 ```  
 > **提示：** 需要注意的地方  
 
 + **步骤二** 
-    相关操作的简要说明
+    通过@EnableAdminServer启用Admin功能
 ```html
     <html>
-        <!-- config/code 示例 -->
+        @SpringBootApplication
+        @EnableAdminServer
+        public class AdminServerApplication {
+            public static void main(String[] args) {
+                SpringApplication.run(AdminServerApplication.class, args);
+            }
+        }
     </html>
 ```  
 > **提示：** 需要注意的地方  
