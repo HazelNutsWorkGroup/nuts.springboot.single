@@ -2,15 +2,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 }
 
-bootJar {
-    enabled = false
-}
-
-jar {
-    enabled = true
-}
-
-
-task log4j2Initialize {
-    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
 }

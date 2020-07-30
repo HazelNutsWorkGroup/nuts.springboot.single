@@ -7,7 +7,16 @@ dependencies {
     implementation 'de.codecentric:spring-boot-admin-starter-server:2.2.4'
 }
 
+bootJar {
+    enabled = true
+}
 
-task listenerInitialize {
-    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+jar {
+    enabled = false
+}
+
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
 }

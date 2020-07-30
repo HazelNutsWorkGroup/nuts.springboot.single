@@ -1,10 +1,19 @@
-
 dependencies {
     implementation project(':endpoints:nuts.springboot.clover')
     // 启用SpringBoot Admin功能
     implementation 'de.codecentric:spring-boot-admin-starter-client:2.2.4'
 }
 
-task logInitialize {
-    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+bootJar {
+    enabled = true
+}
+
+jar {
+    enabled = false
+}
+
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
 }

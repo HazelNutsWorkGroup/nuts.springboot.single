@@ -1,6 +1,0 @@
-logback:
-  props:
-    name: logback-dev
-
-logging:
-  config: classpath:logback-spring.xml

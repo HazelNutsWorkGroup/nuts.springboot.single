@@ -4,5 +4,5 @@ home:
 
 spring:
   profiles:
-    include: logback-dev
+    include: logback-dev, mybatis-dev
 #    include: log4j2-dev

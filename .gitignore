@@ -78,3 +78,4 @@ fabric.properties
 /endpoints/nuts-springboot-home/build/
 /nuts-springboot-listener/build/
 /.idea/
+/components/nuts-springboot-dbpool/build/

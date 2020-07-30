@@ -1,0 +1,7 @@
+spring:
+  profiles:
+    active: druid-dev
+#    active: hikari-dev
+#    active: tomcat-dev
+#    active: dbcp2-dev
+#    active: c3p0-dev

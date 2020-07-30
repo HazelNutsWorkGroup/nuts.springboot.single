@@ -1,24 +1,22 @@
-package org.hazulnut;
+package org.hazulnut.dbpool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
- * The project boot class.
+ * .
  *
- * <p>Responsible for starting the boot project
+ * <p>
  *
  * @author <a href="https://blog.csdn.net/yidichaxiang" target="_blank">Sleeber</a>
- * @since 1.0.0
+ * @since 1.3.0
  *
  * <p><b>Note:</b>
- * <p>2020/7/21 16:36: created.<br>
+ * <p>2020/7/29 23:26: created.<br>
  */
 @SpringBootApplication
-public class WebBootApplication {
-
+public class SpringBootTestApplication {
     public static void main(String[] args) {
-        SpringApplication.run(WebBootApplication.class, args);
+        SpringApplication.run(SpringBootTestApplication.class, args);
     }
 }

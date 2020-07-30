@@ -1,0 +1,14 @@
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-jdbc:2.2.9.RELEASE') {
+        exclude group: 'com.zaxxer', module: 'HikariCP'
+    }
+    // MySql数据库驱动
+    implementation rootProject.ext.dependencies["mysql-driver"]
+    implementation rootProject.ext.dependencies["druid-pool"]
+}
+
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
+}

@@ -2,17 +2,12 @@ dependencies {
     // 可选日志组件：logback/log4j2
     implementation project(':components:nuts.springboot.logback')
 //    implementation project(':components:nuts.springboot.log4j2')
+
+    implementation project(':components:nuts.springboot.mybatis')
 }
 
-bootJar {
-    enabled = false
-}
-
-jar {
-    enabled = true
-}
-
-
-task homeInitialize {
-    logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
 }

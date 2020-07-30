@@ -13,6 +13,13 @@ findProject(':components:nuts-springboot-logback')?.name = 'nuts.springboot.logb
 include 'components:nuts-springboot-log4j2'
 findProject(':components:nuts-springboot-log4j2')?.name = 'nuts.springboot.log4j2'
 
+include 'components:nuts-springboot-dbpool'
+findProject(':components:nuts-springboot-dbpool')?.name = 'nuts.springboot.dbpool'
+
+include 'components:nuts-springboot-mybatis'
+findProject(':components:nuts-springboot-mybatis')?.name = 'nuts.springboot.mybatis'
+
+
 include 'endpoints:nuts.springboot.clover'
 findProject(':endpoints:nuts-springboot-clover')?.name = 'nuts.springboot.clover'
 
