@@ -19,6 +19,9 @@ findProject(':components:nuts-springboot-dbpool')?.name = 'nuts.springboot.dbpoo
 include 'components:nuts-springboot-mybatis'
 findProject(':components:nuts-springboot-mybatis')?.name = 'nuts.springboot.mybatis'
 
+include 'components:nuts-springboot-mybatis+'
+findProject(':components:nuts-springboot-mybatis+')?.name = 'nuts.springboot.mybatis+'
+
 
 include 'endpoints:nuts.springboot.clover'
 findProject(':endpoints:nuts-springboot-clover')?.name = 'nuts.springboot.clover'
