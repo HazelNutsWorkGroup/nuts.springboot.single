@@ -81,3 +81,8 @@ fabric.properties
 /components/nuts-springboot-dbpool/build/
 /components/nuts-springboot-mybatis/build/
 /components/nuts-springboot-mybatis+/build/
+/components/build/
+/endpoints/build/
+/kernels/build/
+/kernels/nuts-springboot-core/build/
+/endpoints/nuts-springboot-auth/build/
