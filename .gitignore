@@ -80,3 +80,4 @@ fabric.properties
 /.idea/
 /components/nuts-springboot-dbpool/build/
 /components/nuts-springboot-mybatis/build/
+/components/nuts-springboot-mybatis+/build/
