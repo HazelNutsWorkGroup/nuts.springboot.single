@@ -79,3 +79,4 @@ fabric.properties
 /nuts-springboot-listener/build/
 /.idea/
 /components/nuts-springboot-dbpool/build/
+/components/nuts-springboot-mybatis/build/
