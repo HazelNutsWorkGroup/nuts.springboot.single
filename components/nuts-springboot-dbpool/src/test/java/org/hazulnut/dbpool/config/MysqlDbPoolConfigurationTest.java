@@ -1,6 +1,6 @@
 package org.hazulnut.dbpool.config;
 
-import org.hazulnut.dbpool.AbstractSpringBootTest;
+import org.hazulnut.AbstractSpringBootTest;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

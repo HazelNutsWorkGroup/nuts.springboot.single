@@ -74,6 +74,26 @@
 >这段代码要放置在setting.gradle 文件的最后，否则这段代码之后引入的项目的构建文件名称还是build.gradle。
 >若是配置在build.gradle中，无论是根项目还是子项目，都会编译错误：buildFileName字段是只读的。 
 
++ **依赖配置化**  
+    config.gradle
+```groovy
+    // build.gradle文件
+    apply from: 'config.gradle'
+
+    // 新加config.gradle文件
+    ext {
+        dependencies=[
+                "mysql-driver":"mysql:mysql-connector-java",
+                "hikaricp-pool":"com.zaxxer:HikariCP:3.4.5",
+                "druid-pool":"com.alibaba:druid:1.1.23",
+                "tomcat-pool":"org.apache.tomcat:tomcat-jdbc:8.5.57",
+                "dbcp2-pool":"org.apache.commons:commons-dbcp2:2.7.0",
+                "c3p0-pool":"com.mchange:c3p0:0.9.5.5"
+        ]
+    }
+```  
+> **提示：** 具体使用可以参考dbpool子模块的测试
+
 
 <p align="right"><a href="#">返回顶部</a></p>  
 
