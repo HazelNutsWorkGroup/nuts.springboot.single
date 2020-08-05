@@ -13,6 +13,6 @@ import org.springframework.context.annotation.Configuration;
  * <p><b>Note:</b>
  * <p>2020/7/29 13:47: created.<br>
  */
-@Configuration
+//@Configuration
 public class MybatisConfiguration {
 }
