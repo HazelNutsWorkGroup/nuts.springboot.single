@@ -1,0 +1,15 @@
+# https://mybatis.org/mybatis-3/zh/configuration.html#settings
+mybatis:
+  props:
+    name: mybatis-dev
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
+  mapper-locations: classpath*:mappings/**/**.xml
+  type-aliases-package: org.hazulnut.admin.mapper
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true

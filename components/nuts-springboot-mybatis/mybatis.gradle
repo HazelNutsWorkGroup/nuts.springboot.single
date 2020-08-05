@@ -1,8 +1,12 @@
 dependencies {
-//    implementation 'com.baomidou:mybatis-plus-boot-starter:3.3.1'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2'
-    implementation 'mysql:mysql-connector-java:6.0.6'
-
+    implementation('org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2') {
+        exclude group: 'com.zaxxer', module: 'HikariCP'
+    }
+    implementation('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.13') {
+        exclude group: 'com.zaxxer', module: 'HikariCP'
+    }
+    // 数据库连接池
+    implementation project(':components:nuts.springboot.dbpool')
 }
 
 task initConfig(group: "nuts", description: "initialize configuration") {

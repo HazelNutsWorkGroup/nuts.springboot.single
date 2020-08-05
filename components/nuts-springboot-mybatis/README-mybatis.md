@@ -1,7 +1,7 @@
 <h1 align="center"><a href="README.md">Nuts - SpringBoot Component Kits</a></h1>  
 
-**<p align="right">「Gradle」构建工具</p>**
-「nuts-springboot-」 *引言*   
+**<p align="right">「mybatis」ORM组件</p>**
+「nuts-springboot-mybatis」使用mybatis作为ORM组件。   
 # <a id="nav">目录</a>
 
 1. **[介绍](#info)**  
