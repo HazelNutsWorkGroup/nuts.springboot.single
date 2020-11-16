@@ -27,12 +27,12 @@ import javax.sql.DataSource;
 @Configuration
 public class MysqlDbPoolConfiguration {
 
-    @ConditionalOnClass(name = {"com.zaxxer.hikari.HikariDataSource"})
-    @Bean(destroyMethod = "close", name = "mysqlJdbcDataSource")
-    @ConfigurationProperties("spring.datasource.hikari")
-    public DataSource getHikariCPDatabasePool() {
-        return DataSourceBuilder.create().build();
-    }
+//    @ConditionalOnClass(name = {"com.zaxxer.hikari.HikariDataSource"})
+//    @Bean(destroyMethod = "close", name = "mysqlJdbcDataSource")
+//    @ConfigurationProperties("spring.datasource.hikari")
+//    public DataSource getHikariCPDatabasePool() {
+//        return DataSourceBuilder.create().build();
+//    }
 
     @ConditionalOnClass(name = {"com.alibaba.druid.pool.DruidDataSource"})
     @Bean(destroyMethod = "close", name = "mysqlJdbcDataSource")

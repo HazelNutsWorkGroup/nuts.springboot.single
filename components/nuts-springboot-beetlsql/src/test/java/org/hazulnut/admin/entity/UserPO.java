@@ -1,4 +1,4 @@
-package org.hazulnut.entity;
+package org.hazulnut.admin.entity;
 
 import java.util.Date;
 
@@ -142,5 +142,21 @@ public class UserPO {
 
     public void setLastUpdateTime(Date lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "UserPO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", salt='" + salt + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", status=" + status +
+                ", createTime=" + createTime +
+                ", lastLoginTime=" + lastLoginTime +
+                ", lastUpdateTime=" + lastUpdateTime +
+                '}';
     }
 }

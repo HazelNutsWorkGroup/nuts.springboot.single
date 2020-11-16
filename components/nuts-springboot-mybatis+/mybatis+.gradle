@@ -1,5 +1,5 @@
 dependencies {
-    implementation('com.baomidou:mybatis-plus-boot-starter:3.2.0') {
+    implementation('com.baomidou:mybatis-plus-boot-starter:3.4.0') {
         exclude group: 'com.zaxxer', module: 'HikariCP'
     }
     // 数据库连接池

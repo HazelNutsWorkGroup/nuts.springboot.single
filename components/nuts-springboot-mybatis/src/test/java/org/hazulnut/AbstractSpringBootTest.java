@@ -1,8 +1,6 @@
 package org.hazulnut;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.junit.jupiter.api.BeforeEach;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;

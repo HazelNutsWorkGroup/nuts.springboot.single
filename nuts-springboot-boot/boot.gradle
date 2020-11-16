@@ -1,7 +1,7 @@
 dependencies {
     implementation project(':endpoints:nuts.springboot.clover')
     // 启用SpringBoot Admin功能
-    implementation 'de.codecentric:spring-boot-admin-starter-client:2.2.4'
+    implementation 'de.codecentric:spring-boot-admin-starter-client:2.3.0'
 }
 
 bootJar {
