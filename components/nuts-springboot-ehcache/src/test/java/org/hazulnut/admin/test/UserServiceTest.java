@@ -35,5 +35,11 @@ public class UserServiceTest extends AbstractSpringBootTest {
             logger.info(userPO.toString());
         });
         Assert.isTrue(userPOList.size() > 0, "数据库记录查询异常");
+
+        System.out.println("第二次调用：");
+        List<UserPO> userPOList1 = userService.getList();
+        userPOList1.forEach(userPO -> {
+            logger.info(userPO.toString());
+        });
     }
 }

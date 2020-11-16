@@ -4,6 +4,8 @@ import org.hazulnut.admin.entity.UserPO;
 import org.hazulnut.admin.mapper.UserMapper;
 import org.hazulnut.admin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,13 +23,16 @@ import java.util.List;
  */
 
 @Service("userService")
+@CacheConfig(cacheNames = "user")
 public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
 
     @Override
+    @Cacheable(cacheNames = {"user"})
     public List<UserPO> getList() {
+        System.out.println("查询Users");
         return userMapper.selectAllUser();
     }
 }
