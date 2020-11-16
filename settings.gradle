@@ -25,6 +25,12 @@ findProject(':components:nuts-springboot-mybatis+')?.name = 'nuts.springboot.myb
 include 'components:nuts-springboot-beetlsql'
 findProject(':components:nuts-springboot-beetlsql')?.name = 'nuts.springboot.beetlsql'
 
+include 'components:nuts-springboot-aviator'
+findProject(':components:nuts-springboot-aviator')?.name = 'nuts.springboot.aviator'
+
+include 'components:nuts-springboot-ehcache'
+findProject(':components:nuts-springboot-ehcache')?.name = 'nuts.springboot.ehcache'
+
 
 include 'endpoints:nuts.springboot.clover'
 findProject(':endpoints:nuts-springboot-clover')?.name = 'nuts.springboot.clover'
@@ -61,6 +67,4 @@ rootProject.children.each {
     project ->
         modifyProjectBuildFileName(project)
 }
-include 'components:nuts-springboot-aviator'
-findProject(':components:nuts-springboot-aviator')?.name = 'nuts.springboot.aviator'
 

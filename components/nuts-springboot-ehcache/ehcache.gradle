@@ -1,0 +1,13 @@
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-cache')
+    implementation('org.ehcache:ehcache:3.8.1')
+
+    // 数据库连接池
+    implementation project(':components:nuts.springboot.mybatis')
+}
+
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
+}
