@@ -1,0 +1,15 @@
+dependencies {
+    implementation("org.mvel:mvel2:2.4.10.Final")
+//    implementation("IKExpression:IKExpression:2.1.2")
+    implementation("com.googlecode.aviator:aviator:5.1.4") {
+        exclude(group: 'commons-beanutils', module: 'commons-beanutils')
+    }
+//    implementation("commons-beanutils:commons-beanutils:1.9.4")
+//    implementation project(":components:nuts.springboot.logback")
+}
+
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
+}

@@ -86,3 +86,5 @@ fabric.properties
 /kernels/build/
 /kernels/nuts-springboot-core/build/
 /endpoints/nuts-springboot-auth/build/
+/components/nuts-springboot-cache/build/
+/endpoints/nuts-springboot-exercise/build/

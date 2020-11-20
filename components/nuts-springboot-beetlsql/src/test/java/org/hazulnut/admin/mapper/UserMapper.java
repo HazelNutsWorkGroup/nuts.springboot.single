@@ -17,6 +17,7 @@ import java.util.List;
  * <p><b>Note:</b>
  * <p>2020/7/28 16:56: created.<br>
  */
+@SqlResource("admin.user")
 public interface UserMapper extends BaseMapper<UserPO> {
 
     /**
@@ -24,7 +25,6 @@ public interface UserMapper extends BaseMapper<UserPO> {
      *
      * @return 用户列表
      */
-    @SqlResource("user")
     List<UserPO> selectAllUser();
 
 //    /**

@@ -7,5 +7,5 @@ beetlsql.sqlManager:
   dbStyle: org.beetl.sql.core.db.MySqlStyle
   basePackage: org.hazulnut.admin.mapper
   dev: true
-  sqlPath: sql
+  sqlPath: mappings
   ds: mysqlJdbcDataSource

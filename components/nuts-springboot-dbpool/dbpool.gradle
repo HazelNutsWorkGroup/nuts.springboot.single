@@ -3,7 +3,7 @@ dependencies {
         exclude group: 'com.zaxxer', module: 'HikariCP'
     }
     // MySql数据库驱动
-    implementation rootProject.ext.dependencies["mysql-driver"]
+    implementation rootProject.ext.dependencies["database-driver"]
     implementation rootProject.ext.dependencies["druid-pool"]
 }
 

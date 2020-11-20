@@ -1,6 +1,6 @@
 ext {
     dependencies=[
-            "mysql-driver":"mysql:mysql-connector-java",
+            "database-driver":"mysql:mysql-connector-java",
             "hikaricp-pool":"com.zaxxer:HikariCP:3.4.5",
             "druid-pool":"com.alibaba:druid:1.2.1",
             "tomcat-pool":"org.apache.tomcat:tomcat-jdbc:9.0.39",

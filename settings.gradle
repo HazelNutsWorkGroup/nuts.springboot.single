@@ -28,6 +28,9 @@ findProject(':components:nuts-springboot-beetlsql')?.name = 'nuts.springboot.bee
 include 'components:nuts-springboot-aviator'
 findProject(':components:nuts-springboot-aviator')?.name = 'nuts.springboot.aviator'
 
+include 'components:nuts-springboot-cache'
+findProject(':components:nuts-springboot-cache')?.name = 'nuts.springboot.cache'
+
 include 'components:nuts-springboot-ehcache'
 findProject(':components:nuts-springboot-ehcache')?.name = 'nuts.springboot.ehcache'
 
@@ -40,6 +43,10 @@ findProject(':endpoints:nuts-springboot-home')?.name = 'nuts.springboot.home'
 
 include 'endpoints:nuts-springboot-auth'
 findProject(':endpoints:nuts-springboot-auth')?.name = 'nuts.springboot.auth'
+
+include 'endpoints:nuts-springboot-exercise'
+findProject(':endpoints:nuts-springboot-exercise')?.name = 'nuts.springboot.exercise'
+
 
 include 'kernels:nuts-springboot-core'
 findProject(':kernels:nuts-springboot-core')?.name = 'nuts.springboot.core'

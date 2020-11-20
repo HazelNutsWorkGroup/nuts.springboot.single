@@ -1,0 +1,12 @@
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-cache')
+
+    // 数据库连接池
+    implementation project(':components:nuts.springboot.mybatis')
+}
+
+task initConfig(group: "nuts", description: "initialize configuration") {
+    doFirst {
+        logger.lifecycle String.format("%s %s V%s", new Date().getTimeString(), project.name, project.version)
+    }
+}
